@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Natan Alves</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu_link" href="index.html">Sobre Mim</a>
+            <a class="cabecalho__menu_link" href="formacao.html">Formação Academica</a>
+            <a class="cabecalho__menu_link" href="portifolio.html">Portifólio</a>
+            <a class="cabecalho__menu_link" href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Entre em contato comigo</h1>
+            <p class="apresentacao__conteudo__texto">&emsp;O 'hello world' finalmente saiu do papel, ou melhor da tela e estou pronto para dar meu primeiros passos nessa carreira de dev.</p>
+
+            <p class="apresentacao__conteudo__texto">&emsp;Se quiser bater um papo, saber mais sobre minha trajetoria ou ver mais trabalhos que fiz durante as aulas, fique a vontade!</p>
+
+        <div class="form-container">
+  <h2 id="titulo-form">Mande uma mensagem</h2>
+  <form id="contatoForm">
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu e-mail" required>
+    <textarea name="mensagem" rows="5" placeholder="Mande uma mensagem..." required></textarea>
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+  <p class="mensagem-final">Entrarei em contato em breve :)</p>
+</div>
+
+            <div class="apresentacao__links"> <!-- links para minhas redes sociais-->
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+
+            <a class="apresentacao__links__navegacao" href="https://github.com/NateSilvaA" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/github.png">
+                Github
+            </a>
+
+            <a class="apresentacao__links__navegacao" href="https://instagram.com/natan.alvessilva" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/instagram.png">
+                Instagram
+            </a>
+
+            <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/natan-alves-da-silva-35b54b264/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/linkedin.png">
+                    Linkedin
+            </a>
+
+            </div>
+        </section>  
+    </main>
+
+
+<!-- um pedacinho de java só para fazer uma caixa para mandar mensagem-->
+<script>
+  const form = document.getElementById('contatoForm');
+  const mensagemFinal = document.querySelector('.mensagem-final');
+  const titulo = document.getElementById('titulo-form');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    form.style.display = "none";              // esconde o formulário depois de enviar
+    mensagemFinal.style.display = "block";    
+    titulo.textContent = "Mensagem enviada";  // muda o título para ficar para mostrar que a mensagem foi enviada
+  });
+</script>
+
+
+
+<footer class="rodape">
+        <p> Desenvolvido por Natan A.</p>
+    </footer>
+</body>
+</html>
+
